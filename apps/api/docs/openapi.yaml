@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Aura Messaging API
+  version: 1.0.0
+  description: Production-ready backend surface for realtime messaging, AI tooling, admin operations, and moderation.
+servers:
+  - url: http://localhost:4000
+tags:
+  - name: Auth
+  - name: Users
+  - name: Chats
+  - name: Groups
+  - name: Messages
+  - name: Media
+  - name: Notifications
+  - name: AI
+  - name: Reports
+  - name: Admin
+paths:
+  /api/auth/login:
+    post:
+      tags: [Auth]
+      summary: Login with email and password
+      responses:
+        "200":
+          description: Access token and refresh token issued
+  /api/auth/otp/request:
+    post:
+      tags: [Auth]
+      summary: Request OTP for phone login
+      responses:
+        "202":
+          description: OTP job queued
+  /api/chats:
+    get:
+      tags: [Chats]
+      summary: List chats for current user
+      responses:
+        "200":
+          description: Chat list
+  /api/messages:
+    post:
+      tags: [Messages]
+      summary: Send message
+      responses:
+        "201":
+          description: Message created
+  /api/admin/dashboard/overview:
+    get:
+      tags: [Admin]
+      summary: Admin dashboard overview
+      responses:
+        "200":
+          description: Overview metrics
+  /api/admin/reports:
+    get:
+      tags: [Admin]
+      summary: List reports for moderation
+      responses:
+        "200":
+          description: Report queue
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
