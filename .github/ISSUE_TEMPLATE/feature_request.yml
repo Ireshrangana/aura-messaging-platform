@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest a product, engineering, UI, or platform enhancement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What user or product need does this solve?
+      placeholder: We need ...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature or improvement you want.
+      placeholder: We should add ...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and notes
+      description: Include constraints, UX notes, API ideas, or rollout details.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Web app
+        - Backend
+        - Database
+        - AI
+        - Realtime / calls
+        - Admin / moderation
+        - DevOps / docs
+    validations:
+      required: true
+
