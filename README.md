@@ -1,5 +1,7 @@
 # Aura Messaging Platform
 
+![Aura Messaging Platform banner](.github/assets/repo-social-preview.svg)
+
 Aura Messaging Platform is a modern messaging product foundation that combines a premium Next.js client, a modular Node backend architecture, admin operations tooling, AI-assisted messaging workflows, and privacy-first product design.
 
 The repository is structured for startup MVP velocity while keeping a clean path toward enterprise-scale features such as moderation, auditability, realtime collaboration, and secure communications.
